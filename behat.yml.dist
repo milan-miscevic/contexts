@@ -28,6 +28,17 @@ default:
                 symfony2:
                     selenium2:
                         wd_host: 'http://localhost:4444'
+                        capabilities:
+                            browser: 'chrome'
+                            browserName: 'chrome'
+                            chrome:
+                                switches:
+                                    - '--headless'
+                                    - '--disable-gpu'
+                                    - '--no-sandbox'
+                            extra_capabilities:
+                                "goog:chromeOptions":
+                                    w3c: false
         Behatch\Extension: ~
 
 symfony2:
