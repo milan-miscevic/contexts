@@ -145,7 +145,7 @@ jobs:
       - name: Run selenium
         run: java -jar $SELENIUM_JAR_PATH standalone &
       - name: Run php fixtures server
-        run: php -S localhost:8080 -t tests/fixtures/www
+        run: php -S localhost:8080 -t tests/fixtures/www &> ./fixtures.log &
       - name: Get composer cache directory
         id: composercache
         run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
@@ -159,3 +159,5 @@ jobs:
         run: composer update --no-interaction --no-progress --ansi
       - name: Run behat tests
         run: ./bin/behat -fprogress --no-interaction --profile=${{ matrix.profile }}
+      - name: Show logs
+        run: cat ./fixtures.log
