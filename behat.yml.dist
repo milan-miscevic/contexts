@@ -38,6 +38,7 @@ default:
                             extra_capabilities:
                                 "goog:chromeOptions":
                                     w3c: false
+                            wd_host: 'localhost'
         Behatch\Extension: ~
 
 symfony2:
