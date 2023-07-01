@@ -158,6 +158,6 @@ jobs:
       - name: Update project dependencies
         run: composer update --no-interaction --no-progress --ansi
       - name: Run behat tests
-        run: ./bin/behat tests/features/browser.feature:6 -fprogress --no-interaction --profile=${{ matrix.profile }}
+        run: ./bin/behat tests/features/browser.feature:7 -fprogress --no-interaction --profile=${{ matrix.profile }}
       - name: Show logs
         run: cat ./fixtures.log
