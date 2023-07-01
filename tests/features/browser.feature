@@ -5,7 +5,7 @@ Feature: Browser Feature
     # You will find the necessery help in README.md
     @javascript
     Scenario: Testing simple web access
-        Given I am on "/index.html"
+        Given I am on "/index.php"
         Then I should see "Congratulations, you've correctly set up your apache environment."
 
     @statusCode
