@@ -27,7 +27,7 @@ default:
                     goutte: ~
                 symfony2:
                     selenium2:
-                        wd_host: 'http://localhost:4444/'
+                        wd_host: 'http://localhost:4444'
                         capabilities:
                             browser: 'chrome'
                             browserName: 'chrome'
