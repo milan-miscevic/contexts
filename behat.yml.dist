@@ -27,6 +27,7 @@ default:
                     goutte: ~
                 symfony2:
                     selenium2:
+                        wd_host: 'localhost'
                         capabilities:
                             browser: 'chrome'
                             browserName: 'chrome'
@@ -38,7 +39,6 @@ default:
                             extra_capabilities:
                                 "goog:chromeOptions":
                                     w3c: false
-                            wd_host: 'localhost'
         Behatch\Extension: ~
 
 symfony2:
