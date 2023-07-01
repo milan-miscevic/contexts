@@ -144,8 +144,8 @@ jobs:
           ini-values: memory_limit=-1
       - name: Run selenium
         run: |
-          echo $SELENIUM_JAR_PATH
-          java -jar $SELENIUM_JAR_PATH standalone --host 10.1.0.32 &
+          wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.8.0/selenium-server-4.8.0.jar
+          java -jar ./selenium-server-4.8.0.jar standalone --host 10.1.0.32 &
       - name: Run php fixtures server
         run: php -S localhost:8080 -t tests/fixtures/www &> ./fixtures.log &
       - name: Get composer cache directory
