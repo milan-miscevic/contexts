@@ -3,7 +3,6 @@ Feature: Browser Feature
     # If this scenario fails
     # It's probably because your web environment is not properly setup
     # You will find the necessery help in README.md
-    @javascript
     Scenario: Testing simple web access
         Given I am on "/index.php"
         Then I should see "Congratulations, you've correctly set up your apache environment."
