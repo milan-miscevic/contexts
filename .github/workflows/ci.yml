@@ -145,7 +145,7 @@ jobs:
       - name: Run selenium
         run: |
           wget https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.8.0/selenium-server-4.8.0.jar
-          java -jar ./selenium-server-4.8.0.jar standalone --host 10.1.0.32 &
+          java -jar ./selenium-server-4.8.0.jar standalone --host localhost &
       - name: Run php fixtures server
         run: php -S localhost:8080 -t tests/fixtures/www &> ./fixtures.log &
       - name: Get composer cache directory
